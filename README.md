@@ -17,15 +17,7 @@
 - [x] Create a new React TypeScript project using Vite
 - [x] Create the following folder structure:
 
-```ts
-src / components / AlertBox / AlertBox.tsx;
-AlertBox.test.tsx;
-UserProfileCard / UserProfileCard.tsx;
-UserProfileCard.test.tsx;
-ProductDisplay / ProductDisplay.tsx;
-ProductDisplay.test.tsx;
-types / index.ts;
-```
+![Folder Structure](./images/folder-structure.jpg)
 
 ### Component Requirements
 
