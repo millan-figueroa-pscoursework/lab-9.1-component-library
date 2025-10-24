@@ -198,7 +198,7 @@ const user = {
 </UserProfileCard>;
 ```
 
-![User Profile Card](./images/user-profile-card.jpg)
+![User Profile Card](./images/user-profile-card.JPG)
 
 #### ProductDisplay Example
 
@@ -208,7 +208,7 @@ const product = {
   name: "Wireless Headphones",
   price: 199.99,
   description: "High-quality wireless headphones with noise cancellation.",
-  imageUrl: "https://example.com/headphones.jpg",
+  imageUrl: "https://example.com/headphones.JPG",
   inStock: true,
 };
 
@@ -222,7 +222,7 @@ const product = {
 </ProductDisplay>;
 ```
 
-![Product Display](./images/product-display.jpg)
+![Product Display](./images/product-display.JPG)
 
 #### Component Composition Example
 
