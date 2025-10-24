@@ -175,7 +175,7 @@ Here are examples of how to use each component, and an example of the result:
 </AlertBox>
 ```
 
-![Alert Box](./public/alert-box.jpg)
+![Alert Box](./images/alert-box.jpg)
 
 #### UserProfileCard Example
 
@@ -198,7 +198,7 @@ const user = {
 </UserProfileCard>;
 ```
 
-![User Profile Card](./public/user-profile-card.jpg)
+![User Profile Card](./images/user-profile-card.jpg)
 
 #### ProductDisplay Example
 
@@ -222,7 +222,7 @@ const product = {
 </ProductDisplay>;
 ```
 
-![Product Display](./public/product-display.jpg)
+![Product Display](./images/product-display.jpg)
 
 #### Component Composition Example
 
