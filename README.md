@@ -17,7 +17,7 @@
 - [x] Create a new React TypeScript project using Vite
 - [x] Create the following folder structure:
 
-![Folder Structure](./images/folder-structure.jpg)
+![Folder Structure](./images/folder-structure.JPG)
 
 ### Component Requirements
 
@@ -167,7 +167,7 @@ Here are examples of how to use each component, and an example of the result:
 </AlertBox>
 ```
 
-![Alert Box](./images/alert-box.jpg)
+![Alert Box](./images/alert-box.JPG
 
 #### UserProfileCard Example
 
