@@ -1,5 +1,6 @@
 import { AlertBox } from "./components/Alertbox/AlertBox";
 import UserProfileCard from "./components/UserProfileCard/UserProfileCard";
+import avatar from "../images/avatar.jpg";
 
 function App() {
   const user = {
@@ -7,7 +8,7 @@ function App() {
     name: "John Doe",
     email: "john.doe@example.com",
     role: "Software Engineer",
-    avatarUrl: "https://example.com/avatar.jpg",
+    avatarUrl: avatar,
   };
 
   return (
