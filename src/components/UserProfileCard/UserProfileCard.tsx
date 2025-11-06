@@ -9,40 +9,26 @@ const UserProfileCard: React.FC<UserProfileCardProps> = ({
   children,
 }) => {
   return (
-    <div
-      style={{
-        border: "1px solid #ccc",
-        borderRadius: "8px",
-        padding: "16px",
-        maxWidth: "250px",
-        textAlign: "center",
-      }}
-    >
+    <div className="bg-white border border-gray-200 rounded-xl p-6 max-w-xs text-center w-full shadow-md">
       {user.avatarUrl && (
         <img
           src={user.avatarUrl}
           alt={user.name}
-          style={{ width: "80px", height: "80px", borderRadius: "50%" }}
+          className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
         />
       )}
-      <h2>{user.name}</h2>
-      {showEmail && <p>{user.email}</p>}
-      {showRole && <p>{user.role}</p>}
-
+      <h2 className="text-xl font-medium text-gray-900 mb-1">{user.name}</h2>
+      {showRole && <p className="text-sm text-gray-500 mb-2">{user.role}</p>}
+      {showEmail && <p className="text-sm text-gray-600 mb-4">{user.email}</p>}
       {onEdit && (
         <button
           onClick={() => onEdit(user.id)}
-          style={{
-            marginTop: "8px",
-            padding: "4px 8px",
-            cursor: "pointer",
-          }}
+          className="inline-block px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-600 transition-colors"
         >
           Edit
         </button>
       )}
-
-      {children}
+      {children && <div className="mt-4 text-sm text-gray-500">{children}</div>}
     </div>
   );
 };
