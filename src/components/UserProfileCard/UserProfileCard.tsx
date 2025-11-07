@@ -6,6 +6,7 @@ const UserProfileCard: React.FC<UserProfileCardProps> = ({
   showEmail = true,
   showRole = true,
   onEdit,
+  cartCount,
   children,
 }) => {
   return (
@@ -26,6 +27,13 @@ const UserProfileCard: React.FC<UserProfileCardProps> = ({
             <p className="text-sm text-gray-500 mb-2">{user.role}</p>
           )}
           {showEmail && <p className="text-sm text-gray-600">{user.email}</p>}
+          {/* cartCount prop to display cart items */}
+          {cartCount !== undefined && (
+            <p className="text-sm text-blue-500 mt-1">
+              {user.name} has {cartCount} item{cartCount === 1 ? "" : "s"} in
+              cart
+            </p>
+          )}
         </div>
       </div>
       {onEdit && (

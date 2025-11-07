@@ -20,6 +20,7 @@ export interface UserProfileCardProps {
     showEmail?: boolean;
     showRole?: boolean;
     onEdit?: (userId: string) => void;
+    cartCount?: number;
     children?: React.ReactNode;
 }
 

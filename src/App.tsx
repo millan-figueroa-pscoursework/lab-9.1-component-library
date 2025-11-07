@@ -40,6 +40,35 @@ function App() {
         <h1 className="font-bold">React Component Library</h1>
       </div>
 
+      <div className="p-4">
+        {showAlert && (
+          <AlertBox
+            type="success"
+            message="Product added to cart!"
+            onClose={() => setShowAlert(false)}
+          >
+            <p className="text-sm">
+              You have {cartItems.length} item(s) in your cart.
+            </p>
+          </AlertBox>
+        )}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+          <UserProfileCard
+            user={user}
+            showEmail={true}
+            showRole={true}
+            cartCount={cartItems.length}
+          />
+          <ProductDisplay
+            product={product}
+            showDescription={true}
+            showStockStatus={true}
+            onAddToCart={handleAddToCart}
+          />
+        </div>
+      </div>
+
       {/* alertbox tests */}
       <section className="my-12 space-y-3">
         <h3 className="text-2xl font-semibold">Alertbox variations</h3>
