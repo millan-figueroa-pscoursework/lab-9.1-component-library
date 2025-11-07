@@ -79,6 +79,41 @@ function App() {
         {/* read-only (no onEdit), email only */}
         <UserProfileCard user={user} showEmail={true} showRole={false} />
       </section>
+
+      {/* UserProfileCard tests */}
+      <section className="my-12 space-y-3">
+        <h2 className="font-semibold text-lg">ProductDisplay variations</h2>
+
+        {/* default */}
+        <ProductDisplay
+          product={product}
+          showDescription
+          showStockStatus
+          onAddToCart={(id) => alert(`Added ${id}`)}
+        >
+          <div className="text-sm text-gray-500">Free shipping available</div>
+        </ProductDisplay>
+
+        {/* hide description + stock */}
+        <ProductDisplay
+          product={product}
+          showDescription={false}
+          showStockStatus={false}
+        />
+
+        {/* out of stock */}
+        <ProductDisplay
+          product={{ ...product, inStock: false }}
+          onAddToCart={(id) => alert(`Try to add ${id}`)}
+        />
+
+        {/* no image, no add to cart */}
+        <ProductDisplay
+          product={{ ...product, imageUrl: undefined }}
+          showDescription
+          showStockStatus
+        />
+      </section>
     </main>
   );
 }
