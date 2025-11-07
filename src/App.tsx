@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { AlertBox } from "./components/AlertBox/AlertBox";
 import UserProfileCard from "./components/UserProfileCard/UserProfileCard";
 import ProductDisplay from "./components/ProductDisplay/ProductDisplay";
@@ -5,6 +6,11 @@ import avatar from "../images/avatar.jpg";
 import headphones from "../images/headphones.jpg";
 
 function App() {
+  // showAlert controls whether alertBox appears w booelean set to false
+  const [showAlert, setShowAlert] = useState(false);
+  // array of product ids added to cart
+  const [cartItems, setCartItems] = useState<string[]>([]);
+
   const user = {
     id: "1",
     name: "John Doe",
@@ -20,6 +26,12 @@ function App() {
     description: "High-quality wireless headphones with noise cancellation.",
     imageUrl: headphones,
     inStock: true,
+  };
+
+  // when 'add to cart' button is clicked, function add product id's to array turns showAlert to true so alert appears
+  const handleAddToCart = (productId: string) => {
+    setCartItems([...cartItems, productId]);
+    setShowAlert(true);
   };
 
   return (
