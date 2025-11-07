@@ -1,6 +1,8 @@
 import { AlertBox } from "./components/Alertbox/AlertBox";
 import UserProfileCard from "./components/UserProfileCard/UserProfileCard";
+import ProductDisplay from "./components/ProductDisplay/ProductDisplay";
 import avatar from "../images/avatar.jpg";
+import headphones from "../images/headphones.jpg";
 
 function App() {
   const user = {
@@ -9,6 +11,15 @@ function App() {
     email: "john.doe@example.com",
     role: "Software Engineer",
     avatarUrl: avatar,
+  };
+
+  const product = {
+    id: "1",
+    name: "Wireless Headphones",
+    price: 199.99,
+    description: "High-quality wireless headphones with noise cancellation.",
+    imageUrl: headphones,
+    inStock: true,
   };
 
   return (
@@ -24,6 +35,7 @@ function App() {
         </AlertBox>
       </div>
       <div className="mt-4">
+        {/* UserProfileCard component */}
         <UserProfileCard
           user={user}
           showEmail={true}
@@ -32,6 +44,19 @@ function App() {
         >
           <div className="text-sm text-gray-500">Last login: 2 hours ago</div>
         </UserProfileCard>
+      </div>
+      <div className="mt-4">
+        {/* ProductDisplay component */}
+        <ProductDisplay
+          product={product}
+          showDescription={true}
+          showStockStatus={true}
+          onAddToCart={(productId) =>
+            alert(`Added product ${productId} to cart`)
+          }
+        >
+          <div className="text-sm text-gray-500">Free shipping available</div>
+        </ProductDisplay>
       </div>
     </main>
   );
