@@ -1,4 +1,4 @@
-import { AlertBox } from "./components/Alertbox/AlertBox";
+import { AlertBox } from "./components/AlertBox/AlertBox";
 import UserProfileCard from "./components/UserProfileCard/UserProfileCard";
 import ProductDisplay from "./components/ProductDisplay/ProductDisplay";
 import avatar from "../images/avatar.jpg";
@@ -23,9 +23,14 @@ function App() {
   };
 
   return (
-    <main className="p-10">
-      <h1 className="font-b">React Component Library</h1>
-      <div>
+    <main className="px-10">
+      <div className="py-4 border-b">
+        <h1 className="font-bold">React Component Library</h1>
+      </div>
+
+      {/* alertbox tests */}
+      <section className="mt-3 space-y-3">
+        <h3 className="text-2xl font-semibold">Alertbox variations</h3>
         <AlertBox
           type="success"
           message="Your profile has been updated successfully!"
@@ -33,7 +38,21 @@ function App() {
         >
           <p className="text-sm">You can now continue using the application.</p>
         </AlertBox>
-      </div>
+        <AlertBox type="success" message="Saved successfully!" />
+        <AlertBox
+          type="error"
+          message="Something went wrong."
+          onClose={() => alert("closed")}
+        />
+        <AlertBox type="warning" message="Careful...">
+          <span className="text-sm">Double-check your inputs.</span>
+        </AlertBox>
+        <AlertBox type="info" message="FYI: New version available">
+          <a className="underline text-sm" href="#">
+            See whats new
+          </a>
+        </AlertBox>
+      </section>
       <div className="mt-4">
         {/* UserProfileCard component */}
         <UserProfileCard

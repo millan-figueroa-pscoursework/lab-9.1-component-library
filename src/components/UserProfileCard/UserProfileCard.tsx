@@ -9,8 +9,8 @@ const UserProfileCard: React.FC<UserProfileCardProps> = ({
   children,
 }) => {
   return (
-    <div className="bg-white border border-gray-200 rounded-md py-2 px-4 text-center w-sm  shadow-md">
-      <div className="flex flex-center">
+    <div className="bg-white border border-gray-200 rounded-md py-2 px-4 text-center max-w-sm w-full shadow-md">
+      <div className="flex items-center">
         {user.avatarUrl && (
           <img
             src={user.avatarUrl}

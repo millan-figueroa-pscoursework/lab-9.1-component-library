@@ -14,7 +14,7 @@ const ProductDisplay: React.FC<ProductDisplayProps> = ({
         <img
           src={product.imageUrl}
           alt={product.name}
-          className="block w-full h-40 md:h-56 object-cover rounded-t-md mb-[2px]"
+          className="block w-full h-40 md:h-56 object-cover rounded-t-md mb-0.5"
         />
       )}
 
