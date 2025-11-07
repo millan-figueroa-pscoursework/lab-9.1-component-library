@@ -29,7 +29,7 @@ function App() {
       </div>
 
       {/* alertbox tests */}
-      <section className="mt-3 space-y-3">
+      <section className="my-12 space-y-3">
         <h3 className="text-2xl font-semibold">Alertbox variations</h3>
         <AlertBox
           type="success"
@@ -53,8 +53,10 @@ function App() {
           </a>
         </AlertBox>
       </section>
-      <div className="mt-4">
-        {/* UserProfileCard component */}
+
+      {/* UserProfileCard tests */}
+      <section className="my-12 space-y-3">
+        <h3 className="text-2xl font-semibold">UserProfileCard variations</h3>
         <UserProfileCard
           user={user}
           showEmail={true}
@@ -63,20 +65,20 @@ function App() {
         >
           <div className="text-sm text-gray-500">Last login: 2 hours ago</div>
         </UserProfileCard>
-      </div>
-      <div className="mt-4">
-        {/* ProductDisplay component */}
-        <ProductDisplay
-          product={product}
-          showDescription={true}
-          showStockStatus={true}
-          onAddToCart={(productId) =>
-            alert(`Added product ${productId} to cart`)
-          }
+        {/* hide email + role */}
+        <UserProfileCard user={user} showEmail={false} showRole={false} />
+
+        {/* no avatar, with edit */}
+        <UserProfileCard
+          user={{ ...user, avatarUrl: undefined }}
+          onEdit={(id) => alert(`Editing ${id}`)}
         >
-          <div className="text-sm text-gray-500">Free shipping available</div>
-        </ProductDisplay>
-      </div>
+          <div className="text-xs text-gray-500">No avatar provided</div>
+        </UserProfileCard>
+
+        {/* read-only (no onEdit), email only */}
+        <UserProfileCard user={user} showEmail={true} showRole={false} />
+      </section>
     </main>
   );
 }
